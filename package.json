@@ -10,7 +10,8 @@
   "scripts": {
     "start": "node index.js",
     "build": "npm install",
-    "deploy": "node index.js"
+    "deploy": "node index.js",
+    "create-env": "printenv > .env"
   },
   "author": "Joshua Companion",
   "license": "MIT",
