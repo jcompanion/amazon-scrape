@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "14.6.1"
+  }
   "scripts": {
     "dev": "react-scripts start",
 "start": "serve -s build",
