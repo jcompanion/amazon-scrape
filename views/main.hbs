@@ -1,0 +1,77 @@
+<div id="loader" class="progress">
+      <div class="indeterminate"></div>
+  </div>
+<main>
+  <div class="col s12 m7 container welcome">
+    <h2 class="header">Welcome!</h2>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="https://investorplace.com/wp-content/uploads/2021/02/amzn-300x169.jpg">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <h6>Enter your information below to start continuous tracking for any Amazon products price. Enter the lowest
+            price you are will ing to pay and be notified by email once it drops below that price.</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <form id="form" method="POST" action="send">
+      <div class="row">
+
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="first_name" name="f_name" type="text" class="validate">
+            <label for="first_name">First Name</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="last_name" name="l_name" type="text" class="validate">
+            <label for="last_name">Last Name</label>
+          </div>
+        </div>
+        <div class="row">
+
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="url" name="url" class="materialize-textarea" required></textarea>
+              <label for="textarea1">Amazon Product URL</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">add_alert</i>
+              <textarea id="icon_prefix2" name="price" class="materialize-textarea" required></textarea>
+              <label for="icon_prefix2">Price alert</label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" name="email" type="email" class="validate" required>
+            <label for="email">Email</label>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      {{msg}}
+
+      <button id='submit_btn' class="btn waves-effect waves-light" type="submit">Submit
+        <i class="material-icons right">send</i>
+      </button>
+      
+  
+    </form>
+
+</main>
+
+<script>
+const form = document.getElementById("form");
+const loader = document.getElementById("loader");
+form.addEventListener("submit", () => {
+  loader.style.display = "block";
+  });
+</script>
