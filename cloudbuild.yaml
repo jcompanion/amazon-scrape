@@ -1,8 +1,0 @@
-steps:
-- name: node:14.16.1
-  entrypoint: npm
-  args: ["create-env", "start"]
-  env:
-    - 'OUTLOOK_EMAIL=${_OUTLOOK_EMAIL}'
-    - 'OUTLOOK_PASSWORD=${_OUTLOOK_PASSWORD}'
-
