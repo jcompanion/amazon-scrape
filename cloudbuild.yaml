@@ -6,4 +6,4 @@ steps:
     - 'OUTLOOK_EMAIL=${_OUTLOOK_EMAIL}'
     - 'OUTLOOK_PASSWORD=${_OUTLOOK_PASSWORD}'
 - name: "gcr.io/cloud-builders/gcloud"
-  args: ["gcloud alpha deploy"]
+  args: ["deploy"]
