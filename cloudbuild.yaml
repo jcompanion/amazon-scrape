@@ -1,8 +1,8 @@
 steps:
-- name: node:10.15.1
+- name: node:12.12.1
   entrypoint: npm
   args: ["install"]
-- name: node:10.15.1
+- name: node:12.14.1
   entrypoint: npm
   args: ["run", "create-env"]
   env:
