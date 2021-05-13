@@ -1,9 +1,8 @@
 steps:
 - name: node:14.16.1
   entrypoint: npm
-  args: ["run", "create-env"]
+  args: ["create-env", "start"]
   env:
     - 'OUTLOOK_EMAIL=${_OUTLOOK_EMAIL}'
     - 'OUTLOOK_PASSWORD=${_OUTLOOK_PASSWORD}'
-- name: "gcr.io/cloud-builders/gcloud"
-  args: ["deploy"]
+
