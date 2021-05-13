@@ -10,4 +10,3 @@ steps:
     - 'OUTLOOK_PASSWORD=${_OUTLOOK_PASSWORD}'
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy"]
-timeout: "1600s"
