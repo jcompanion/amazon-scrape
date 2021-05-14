@@ -12,8 +12,17 @@ const cron = require('node-cron');
 const { doesNotMatch } = require('assert');
 let now = new Date();
 
+const https = require('http');
 
-const port = 3000;
+const hostname = '144.202.76.246'
+
+const port = 5000;
+
+const server = http.createServer((req, res) => {
+	res.statusCode = 200;
+  	res.setHeader('Content-Type', 'text/plain');
+  	res.end('Sysmon App is Up and Running!\n');
+});
 
 const app = express();
 
