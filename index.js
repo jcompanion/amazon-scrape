@@ -14,15 +14,10 @@ let now = new Date();
 
 const https = require('http');
 
-const hostname = '144.202.76.246'
+const hostname = '144.202.76.246';
 
 const port = 5000;
 
-const server = http.createServer((req, res) => {
-	res.statusCode = 200;
-  	res.setHeader('Content-Type', 'text/plain');
-  	res.end('Sysmon App is Up and Running!\n');
-});
 
 const app = express();
 
@@ -195,4 +190,4 @@ async function checkPrice(url, price, email) {
 
 
 //Start server
-app.listen(process.env.PORT || port, () => console.log("Server Started..."));
+app.listen(process.env.PORT || port, () => console.log(`Server Started Port: ${port}...`));
