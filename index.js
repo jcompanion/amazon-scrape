@@ -12,9 +12,6 @@ const cron = require('node-cron');
 const { doesNotMatch } = require('assert');
 let now = new Date();
 
-const https = require('http');
-
-const hostname = '144.202.76.246';
 
 const port = 5000;
 
@@ -79,7 +76,7 @@ app.post('/send', (req, res) => {
   console.log("Sending Initial email with customer information")
   
   console.log("First Price Check...");
-
+  checkPrice(url, price, email);
   
 });
 
@@ -121,6 +118,7 @@ async function main(u, o) {
 
 async function getProduct(url, price, res) {
   try{
+   console.log("Scanning product...")
   const productInfo = await nightmare
   .goto(url)
   .evaluate(() => {
